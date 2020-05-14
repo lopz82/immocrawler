@@ -107,7 +107,7 @@ class Search:
         log.debug(f"Added {tasks}")
 
     def run_tasks(self) -> None:
-        # self.shuffle_tasks()
+        self.shuffle_tasks()
         log.info("Running tasks.")
         for task in self.tasks:
             wait = self.random_time
@@ -121,7 +121,7 @@ class Search:
             log.info(f"Task ran successfully.")
 
     def insert_results(self) -> None:
-        documents = [result.data for result in self.results]
+        documents = [result.data for result in self.results if result]
         self.insert(documents)
 
     def run(self) -> None:
