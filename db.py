@@ -1,6 +1,4 @@
-from typing import List
-
-import pymongo
+from pymongo import MongoClient
 
 from config import CONFIG
 from result import Result
@@ -8,8 +6,8 @@ from result import Result
 
 class MongoDB:
     def __init__(self):
-        self.client = pymongo.MongoClient(CONFIG["mongodb"]["connection_string"])
+        self.client = MongoClient(CONFIG["mongodb"]["connection_string"])
         self.cursor = self.client.get_database("immobilien").get_collection("frankfurt")
 
-    def insert(self, documents: List[Result]) -> None:
-        self.cursor.insert_many(documents)
+    def save(self, result: Result) -> None:
+        self.cursor.insert(result.data)
