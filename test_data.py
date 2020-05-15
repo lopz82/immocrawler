@@ -27,3 +27,5 @@ R3 = {'title': 'Ankündigung - Top 3 ZKB in der Bruchfeldstraße 29 - gegenüber
       'construction year': '2020', 'status': ' Neuwertig ', 'heating type': ' Zentralheizung ',
       'description': 'Dieses Wohn- und Geschäftshaus besteht aus insgesamt 14 Einheiten mit 10 Wohnungen und 4 Gewerbeeinheiten (Restaurant, Pizza Hut, Main Burger, Friseur). Gegenüberliegend sind die Nahversorger Rewe, Bäckerei u.v.m.\nIn dieser großzügigen 2-Zimmerwohnung ist der Wohn- Essbereich mit einer integrierten, exklusiven Einbauküche. Das Schlafzimmer ist geräumig, das Badezimmer ist ausgestattet mit einer Ebenerdigen Dusche und einer Badewanne. Alle Räume sind hochwertig ausgestattet und haben Fußbodenheizung, genießen Sie modernen Wohnkomfort fast mitten in Großstadt.',
       'equipment': '- elegantes Bad mit Wanne und Dusche Echtglasduschkabine\n- Waschmaschinenanschluss im Bad\n- Gäste-WC\n- hochwertige Einbauküche - edle Parkettböden\n- edle Feinsteinzeugboden - Fußbodenheizung\n- Aufzug\n- separater Keller\n- Fahrradkeller\n- Videosprechanlage\n- Kabelanschluss\n- modernster Telefon- und Internetanschluss'}
+
+
