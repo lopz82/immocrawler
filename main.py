@@ -1,4 +1,5 @@
-from crawler import Search
+from publisher import Publisher
 
-s = Search(rooms=3, price=1000, living_space=80)
-s.run()
+search = {}
+pub = Publisher(**search)
+pub.publish()
