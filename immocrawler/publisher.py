@@ -1,6 +1,6 @@
-from messaging import AzureStorageQueueClient
-from search import ImmobilienScoutSearch
-from utils import get_logger
+from immocrawler.messaging import AzureStorageQueueClient
+from immocrawler.search import ImmobilienScoutSearch
+from immocrawler.utils import get_logger
 
 log = get_logger(__name__)
 

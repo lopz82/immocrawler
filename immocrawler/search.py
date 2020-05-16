@@ -5,8 +5,8 @@ from typing import Tuple, List
 import requests
 from bs4 import BeautifulSoup
 
-from config import BASE_URL, HEADERS, PAGE_NUMBER_SLUG, MAIN_LINK
-from utils import get_logger, random_time
+from immocrawler.config import BASE_URL, HEADERS, PAGE_NUMBER_SLUG, MAIN_LINK
+from immocrawler.utils import get_logger, random_time
 
 log = get_logger(__name__)
 

@@ -1,7 +1,7 @@
 from datetime import datetime
 from hashlib import sha256
 
-from geo import geolocation
+from immocrawler.geo import geolocation
 
 
 class Result:

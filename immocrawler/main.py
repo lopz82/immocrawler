@@ -1,4 +1,4 @@
-from publisher import Publisher
+from immocrawler.publisher import Publisher
 
 search = {}
 pub = Publisher(**search)

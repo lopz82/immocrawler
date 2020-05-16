@@ -1,7 +1,7 @@
 from azure.storage.queue import QueueClient, QueueMessage
 
-from config import CONFIG
-from utils import get_logger
+from immocrawler.config import CONFIG
+from immocrawler.utils import get_logger
 
 CONNECTION_STRING = CONFIG["azure_queue"]["connection_string"]
 QUEUE_NAME = "frankfurt"

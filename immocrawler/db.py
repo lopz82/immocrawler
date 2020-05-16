@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
-from config import CONFIG
-from result import Result
+from immocrawler.config import CONFIG
+from immocrawler.result import Result
 
 
 class MongoDB:

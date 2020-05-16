@@ -3,9 +3,9 @@ from typing import Type, TypeVar
 import requests
 from bs4 import BeautifulSoup
 
-from config import CRITERIA, HEADERS, BASE_URL
-from result import Result
-from utils import get_logger
+from immocrawler.config import CRITERIA, HEADERS, BASE_URL, FILTER
+from immocrawler.result import Result
+from immocrawler.utils import get_logger
 
 log = get_logger(__name__)
 
@@ -39,15 +39,18 @@ class StandardSearchTask(SearchTask):
         else:
             log.error(
                 f"Error extracting image with div.first-gallery-picture-container img. Expecting one result, got {len(image_source)}.")
-        for section, CSS_selector in CRITERIA.items():
-            log.info(f"Extracting {section} with {CSS_selector} selector.")
-            item = soup.select(CSS_selector)
+        for section, config in CRITERIA.items():
+            css_selector = config["selector"]
+            kind = config["kind"]
+            filter_func = FILTER[kind]
+            log.info(f"Extracting {section} with {css_selector} selector.")
+            item = soup.select(css_selector)
             if len(item) != 1:
-                log.error(f"Error extracting {section} with {CSS_selector}. Expecting one result, got {len(item)}. "
+                log.error(f"Error extracting {section} with {css_selector}. Expecting one result, got {len(item)}. "
                           f"Setting {section} to None")
                 data[section] = None
                 continue
-            data[section] = item[0].get_text()
+            data[section] = filter_func(item[0].get_text())
             log.info(f"Added {section}: {item[0].get_text()}")
         result = Result(self.url, **data)
         return result

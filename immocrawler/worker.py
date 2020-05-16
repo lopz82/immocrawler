@@ -1,10 +1,10 @@
 from time import sleep
 from typing import Tuple
 
-from db import MongoDB
-from messaging import AzureStorageQueueClient
-from tasks import SearchTaskFactory
-from utils import get_logger, random_time
+from immocrawler.db import MongoDB
+from immocrawler.messaging import AzureStorageQueueClient
+from immocrawler.tasks import SearchTaskFactory
+from immocrawler.utils import get_logger, random_time
 
 log = get_logger(__name__)
 

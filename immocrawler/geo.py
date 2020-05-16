@@ -2,8 +2,8 @@ from typing import Tuple
 
 import requests
 
-from config import CONFIG
-from utils import get_logger
+from immocrawler.config import CONFIG
+from immocrawler.utils import get_logger
 
 URL = "https://geocode.search.hereapi.com/v1/geocode"
 API_KEY = CONFIG["here"]["api_key"]
