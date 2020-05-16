@@ -10,4 +10,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ENV PYTHONPATH /usr/src/app
 
-CMD [ "python", "./immocrawler/main.py" ]
+CMD [ "python", "./immocrawler/worker.py" ]
