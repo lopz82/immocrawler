@@ -133,4 +133,4 @@ dmypy.json
 
 # Pipfile
 Pipfile
-connections.yml
+immocrawler/connections.yml
